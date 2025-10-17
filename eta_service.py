@@ -1,58 +1,44 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from geopy.distance import geodesic
-import joblib
-import numpy as np
+from typing import Optional
+import pandas as pd
+import pickle
 
-# Initialize FastAPI app
-app = FastAPI(title="ETA Prediction Service")
+# Load trained model
+with open("eta_model.pkl", "rb") as f:
+    model = pickle.load(f)
 
-# Load your trained model
-model = joblib.load("eta_model.pkl")
+app = FastAPI()
 
-# Define input schema
-class ETARequest(BaseModel):
-    bus_lat: float
-    bus_lng: float
-    student_lat: float
-    student_lng: float
-    speed: float          # current bus speed (m/s)
-    emergency: bool
-    hour: int
-    weekday: int
+# Define Pydantic model for IoT input
+class IoTETARequest(BaseModel):
+    distance_km: float
+    speed_kmh: float
+    status: int
+    bus_lat: Optional[float] = None
+    bus_lng: Optional[float] = None
+    student_lat: Optional[float] = None
+    student_lng: Optional[float] = None
+    speed: Optional[float] = None
+    emergency: Optional[int] = None
+    hour: Optional[int] = None
+    weekday: Optional[int] = None
+
+# List of features your model actually uses
+MODEL_FEATURES = ["distance_km", "speed_kmh", "status"]
 
 @app.post("/predict_eta")
-def predict_eta(data: ETARequest):
-    """
-    Predict Estimated Time of Arrival (ETA) in minutes.
-    """
-    # Compute the distance between bus and student
-    distance_km = geodesic(
-        (data.bus_lat, data.bus_lng),
-        (data.student_lat, data.student_lng)
-    ).km
+def predict_eta(request: IoTETARequest):
+    # Convert input to DataFrame
+    input_data = request.dict()
 
-    # Convert speed from m/s to km/h
-    speed_kmh = data.speed * 3.6
-
-    # For now, define status = 1 (e.g., "en route")
-    status = 1
-
-    # Build the input array exactly like the model was trained
-    features = np.array([[distance_km, speed_kmh, status]])
+    # Keep only features needed for prediction
+    features = pd.DataFrame([{k: input_data[k] for k in MODEL_FEATURES}])
 
     # Make prediction
     eta = model.predict(features)[0]
 
     return {
-        "eta_minutes": float(eta),
-        "inputs_used": {
-            "distance_km": distance_km,
-            "speed_kmh": speed_kmh,
-            "status": status
-        }
+        "eta_minutes": eta,
+        "inputs_used": features.iloc[0].to_dict()
     }
-
-@app.get("/")
-def home():
-    return {"message": "ETA Prediction API is running 🚍"}
