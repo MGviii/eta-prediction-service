@@ -34,6 +34,11 @@ except Exception as e:
     model = None
 
 # -------------------------------
+# Define features actually used by the model
+# -------------------------------
+MODEL_FEATURES = ["distance_km", "speed_kmh", "status"]
+
+# -------------------------------
 # Health check
 # -------------------------------
 @app.get("/")
@@ -48,26 +53,15 @@ def predict_eta(request: ETAPredictRequest):
     if model is None:
         return {"error": "Model not loaded"}
 
-    # Extract features in the order expected by your model
-    features = np.array([[
-        request.distance_km,
-        request.speed_kmh,
-        request.status,
-        request.bus_lat,
-        request.bus_lng,
-        request.student_lat,
-        request.student_lng,
-        request.speed,
-        request.emergency,
-        request.hour,
-        request.weekday
-    ]])
+    # Extract only the features your model was trained on
+    features = np.array([[getattr(request, f) for f in MODEL_FEATURES]])
 
     try:
         eta = model.predict(features)[0]
         return {
             "eta_minutes": float(eta),
-            "inputs_used": request.dict()
+            "inputs_used": {f: getattr(request, f) for f in MODEL_FEATURES},
+            "all_inputs": request.dict()  # optional: keep all fields for logging/debugging
         }
     except Exception as e:
         return {"error": str(e)}
