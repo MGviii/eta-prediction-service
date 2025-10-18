@@ -1,0 +1,839 @@
+{
+  "Emergency": {
+    "Bus1": {
+      "emergency": true,
+      "location": {
+        "lat": -1.913953,
+        "lng": 30.08092
+      },
+      "readerUsername": "Bus1"
+    },
+    "Bus2": {
+      "emergency": true,
+      "location": {
+        "lat": -1.913976,
+        "lng": 30.08095
+      },
+      "readerUsername": "Bus2"
+    }
+  },
+  "admins": {
+    "hjIFasg8BcY6NsDnPQAd": {
+      "defaultPassword": "123456",
+      "email": "admin2@ruhire.com",
+      "name": "Admin two",
+      "phone": "+25078934235"
+    }
+  },
+  "busLocations": {
+    "1759922147297": {
+      "current": {
+        "Altitude": 1469.5,
+        "Date": "18/10/2025",
+        "Heading": 30,
+        "Latitude": -1.913975,
+        "Longitude": 30.08094,
+        "Satellites": 11,
+        "Speed": 0.66672,
+        "Time (UTC)": "13:43:9",
+        "timestamp": 1760794998760
+      },
+      "history": {
+        "1760792643201": {
+          "Altitude": 1471.6,
+          "Date": "18/10/2025",
+          "Latitude": -1.913992,
+          "Longitude": 30.08088,
+          "Satellites": 12,
+          "Speed": 0.12964,
+          "Time (UTC)": "13:3:6",
+          "timestamp": 1760792643201
+        },
+        "1760792670215": {
+          "Altitude": 1475.5,
+          "Date": "18/10/2025",
+          "Latitude": -1.91398,
+          "Longitude": 30.08089,
+          "Satellites": 12,
+          "Speed": 0.25928,
+          "Time (UTC)": "13:4:6",
+          "timestamp": 1760792670215
+        },
+        "1760792695804": {
+          "Altitude": 1465.7,
+          "Date": "18/10/2025",
+          "Latitude": -1.913991,
+          "Longitude": 30.08089,
+          "Satellites": 11,
+          "Speed": 1.59272,
+          "Time (UTC)": "13:4:50",
+          "timestamp": 1760792695804
+        },
+        "1760792710343": {
+          "Altitude": 1465.7,
+          "Date": "18/10/2025",
+          "Latitude": -1.913993,
+          "Longitude": 30.08091,
+          "Satellites": 9,
+          "Speed": 0.01852,
+          "Time (UTC)": "13:5:7",
+          "timestamp": 1760792710343
+        },
+        "1760792771211": {
+          "Altitude": 1466.8,
+          "Date": "18/10/2025",
+          "Latitude": -1.913965,
+          "Longitude": 30.0809,
+          "Satellites": 8,
+          "Speed": 0.25928,
+          "Time (UTC)": "13:6:7",
+          "timestamp": 1760792771211
+        },
+        "1760792831019": {
+          "Altitude": 1462.3,
+          "Date": "18/10/2025",
+          "Latitude": -1.91395,
+          "Longitude": 30.08094,
+          "Satellites": 10,
+          "Speed": 0.70376,
+          "Time (UTC)": "13:7:7",
+          "timestamp": 1760792831019
+        },
+        "1760792890761": {
+          "Altitude": 1466.5,
+          "Date": "18/10/2025",
+          "Latitude": -1.913969,
+          "Longitude": 30.08094,
+          "Satellites": 11,
+          "Speed": 0.31484,
+          "Time (UTC)": "13:8:7",
+          "timestamp": 1760792890761
+        },
+        "1760792924624": {
+          "Altitude": 1469.7,
+          "Date": "18/10/2025",
+          "Latitude": -1.913971,
+          "Longitude": 30.08094,
+          "Satellites": 11,
+          "Speed": 0.48152,
+          "Time (UTC)": "13:8:33",
+          "timestamp": 1760792924624
+        },
+        "1760792951693": {
+          "Altitude": 1460.8,
+          "Date": "18/10/2025",
+          "Latitude": -1.913942,
+          "Longitude": 30.08093,
+          "Satellites": 11,
+          "Speed": 0.31484,
+          "Time (UTC)": "13:9:7",
+          "timestamp": 1760792951693
+        },
+        "1760792986104": {
+          "Altitude": 1462.9,
+          "Date": "18/10/2025",
+          "Latitude": -1.913952,
+          "Longitude": 30.08093,
+          "Satellites": 11,
+          "Speed": 0.44448,
+          "Time (UTC)": "13:9:40",
+          "timestamp": 1760792986104
+        },
+        "1760793011474": {
+          "Altitude": 1464.4,
+          "Date": "18/10/2025",
+          "Latitude": -1.913953,
+          "Longitude": 30.08093,
+          "Satellites": 11,
+          "Speed": 0.70376,
+          "Time (UTC)": "13:10:7",
+          "timestamp": 1760793011474
+        },
+        "1760793070782": {
+          "Altitude": 1463,
+          "Date": "18/10/2025",
+          "Heading": 32,
+          "Latitude": -1.913953,
+          "Longitude": 30.08093,
+          "Satellites": 12,
+          "Speed": 0.12964,
+          "Time (UTC)": "13:11:7",
+          "timestamp": 1760793070782
+        },
+        "1760793099910": {
+          "Altitude": 1462.6,
+          "Date": "18/10/2025",
+          "Heading": 32,
+          "Latitude": -1.913953,
+          "Longitude": 30.08092,
+          "Satellites": 12,
+          "Speed": 0.88896,
+          "Time (UTC)": "13:11:35",
+          "timestamp": 1760793099910
+        },
+        "1760793105434": {
+          "Altitude": 1462.8,
+          "Date": "18/10/2025",
+          "Heading": 32,
+          "Latitude": -1.913954,
+          "Longitude": 30.08092,
+          "Satellites": 12,
+          "Speed": 1.2038,
+          "Time (UTC)": "13:11:36",
+          "timestamp": 1760793105434
+        },
+        "1760793121335": {
+          "Altitude": 1466.1,
+          "Date": "18/10/2025",
+          "Heading": 32,
+          "Latitude": -1.91396,
+          "Longitude": 30.0809,
+          "Satellites": 12,
+          "Speed": 0.25928,
+          "Time (UTC)": "13:11:55",
+          "timestamp": 1760793121335
+        },
+        "1760793130798": {
+          "Altitude": 1466.9,
+          "Date": "18/10/2025",
+          "Heading": 32,
+          "Latitude": -1.913963,
+          "Longitude": 30.08089,
+          "Satellites": 12,
+          "Speed": 0.16668,
+          "Time (UTC)": "13:12:7",
+          "timestamp": 1760793130798
+        },
+        "1760793140621": {
+          "Altitude": 1467.1,
+          "Date": "18/10/2025",
+          "Heading": 32,
+          "Latitude": -1.913963,
+          "Longitude": 30.0809,
+          "Satellites": 12,
+          "Speed": 0.24076,
+          "Time (UTC)": "13:12:14",
+          "timestamp": 1760793140621
+        },
+        "1760793190807": {
+          "Altitude": 1467,
+          "Date": "18/10/2025",
+          "Heading": 32,
+          "Latitude": -1.913947,
+          "Longitude": 30.08092,
+          "Satellites": 11,
+          "Speed": 0.90748,
+          "Time (UTC)": "13:13:7",
+          "timestamp": 1760793190807
+        },
+        "1760793197951": {
+          "Altitude": 1466.9,
+          "Date": "18/10/2025",
+          "Heading": 32,
+          "Latitude": -1.913949,
+          "Longitude": 30.08092,
+          "Satellites": 10,
+          "Speed": 0.25928,
+          "Time (UTC)": "13:13:8",
+          "timestamp": 1760793197951
+        },
+        "1760793210698": {
+          "Altitude": 1467.1,
+          "Date": "18/10/2025",
+          "Heading": 50,
+          "Latitude": -1.91395,
+          "Longitude": 30.08094,
+          "Satellites": 12,
+          "Speed": 0.01852,
+          "Time (UTC)": "13:13:24",
+          "timestamp": 1760793210698
+        },
+        "1760793251183": {
+          "Altitude": 1465.4,
+          "Date": "18/10/2025",
+          "Heading": 50,
+          "Latitude": -1.913956,
+          "Longitude": 30.08093,
+          "Satellites": 12,
+          "Speed": 0.22224,
+          "Time (UTC)": "13:14:7",
+          "timestamp": 1760793251183
+        },
+        "1760793311636": {
+          "Altitude": 1461.6,
+          "Date": "18/10/2025",
+          "Heading": 50,
+          "Latitude": -1.913952,
+          "Longitude": 30.08092,
+          "Satellites": 12,
+          "Speed": 0.62968,
+          "Time (UTC)": "13:15:7",
+          "timestamp": 1760793311636
+        },
+        "1760793375064": {
+          "Altitude": 1464.7,
+          "Date": "18/10/2025",
+          "Heading": 323.01,
+          "Latitude": -1.913945,
+          "Longitude": 30.08092,
+          "Satellites": 10,
+          "Speed": 2.315,
+          "Time (UTC)": "13:16:7",
+          "timestamp": 1760793375064
+        },
+        "1760793431948": {
+          "Altitude": 1450.6,
+          "Date": "18/10/2025",
+          "Heading": 142.79,
+          "Latitude": -1.913974,
+          "Longitude": 30.08092,
+          "Satellites": 12,
+          "Speed": 0.14816,
+          "Time (UTC)": "13:17:7",
+          "timestamp": 1760793431948
+        },
+        "1760793491462": {
+          "Altitude": 1433.6,
+          "Date": "18/10/2025",
+          "Heading": 142.79,
+          "Latitude": -1.914025,
+          "Longitude": 30.08091,
+          "Satellites": 11,
+          "Speed": 0.31484,
+          "Time (UTC)": "13:18:7",
+          "timestamp": 1760793491462
+        },
+        "1760793553138": {
+          "Altitude": 1460.3,
+          "Date": "18/10/2025",
+          "Heading": 127.84,
+          "Latitude": -1.913983,
+          "Longitude": 30.08094,
+          "Satellites": 11,
+          "Speed": 0.3704,
+          "Time (UTC)": "13:19:7",
+          "timestamp": 1760793553138
+        },
+        "1760793612110": {
+          "Altitude": 1470.3,
+          "Date": "18/10/2025",
+          "Heading": 127.84,
+          "Latitude": -1.913973,
+          "Longitude": 30.08093,
+          "Satellites": 10,
+          "Speed": 0.51856,
+          "Time (UTC)": "13:20:8",
+          "timestamp": 1760793612110
+        },
+        "1760793672332": {
+          "Altitude": 1470.5,
+          "Date": "18/10/2025",
+          "Heading": 127.84,
+          "Latitude": -1.913965,
+          "Longitude": 30.08086,
+          "Satellites": 9,
+          "Speed": 0.22224,
+          "Time (UTC)": "13:21:8",
+          "timestamp": 1760793672332
+        },
+        "1760793731683": {
+          "Altitude": 1474.2,
+          "Date": "18/10/2025",
+          "Heading": 127.84,
+          "Latitude": -1.913964,
+          "Longitude": 30.0809,
+          "Satellites": 10,
+          "Speed": 0.77784,
+          "Time (UTC)": "13:22:8",
+          "timestamp": 1760793731683
+        },
+        "1760793791650": {
+          "Altitude": 1482.4,
+          "Date": "18/10/2025",
+          "Heading": 127.84,
+          "Latitude": -1.913954,
+          "Longitude": 30.08089,
+          "Satellites": 10,
+          "Speed": 1.37048,
+          "Time (UTC)": "13:23:8",
+          "timestamp": 1760793791650
+        },
+        "1760793853582": {
+          "Altitude": 1473.4,
+          "Date": "18/10/2025",
+          "Heading": 127.84,
+          "Latitude": -1.913937,
+          "Longitude": 30.08088,
+          "Satellites": 12,
+          "Speed": 0.50004,
+          "Time (UTC)": "13:24:8",
+          "timestamp": 1760793853582
+        },
+        "1760793912297": {
+          "Altitude": 1468.7,
+          "Date": "18/10/2025",
+          "Heading": 127.84,
+          "Latitude": -1.913974,
+          "Longitude": 30.08091,
+          "Satellites": 10,
+          "Speed": 0.62968,
+          "Time (UTC)": "13:25:8",
+          "timestamp": 1760793912297
+        },
+        "1760793982947": {
+          "Altitude": 1464.5,
+          "Date": "18/10/2025",
+          "Heading": 127.84,
+          "Latitude": -1.913996,
+          "Longitude": 30.08094,
+          "Satellites": 11,
+          "Speed": 0.44448,
+          "Time (UTC)": "13:26:8",
+          "timestamp": 1760793982947
+        },
+        "1760793983857": {
+          "Altitude": 1464.5,
+          "Date": "18/10/2025",
+          "Heading": 127.84,
+          "Latitude": -1.913996,
+          "Longitude": 30.08094,
+          "Satellites": 11,
+          "Speed": 0.44448,
+          "Time (UTC)": "13:26:8",
+          "timestamp": 1760793983857
+        },
+        "1760794038833": {
+          "Altitude": 1477.5,
+          "Date": "18/10/2025",
+          "Heading": 127.84,
+          "Latitude": -1.914009,
+          "Longitude": 30.08097,
+          "Satellites": 10,
+          "Speed": 1.07416,
+          "Time (UTC)": "13:27:1",
+          "timestamp": 1760794038833
+        },
+        "1760794094905": {
+          "Altitude": 1477.5,
+          "Date": "18/10/2025",
+          "Heading": 127.84,
+          "Latitude": -1.914009,
+          "Longitude": 30.08097,
+          "Speed": 1.07416,
+          "Time (UTC)": "13:28:8",
+          "timestamp": 1760794094905
+        },
+        "1760794157049": {
+          "Altitude": 1465.8,
+          "Date": "18/10/2025",
+          "Heading": 127.84,
+          "Latitude": -1.913973,
+          "Longitude": 30.08088,
+          "Satellites": 10,
+          "Speed": 0.48152,
+          "Time (UTC)": "13:29:8",
+          "timestamp": 1760794157049
+        },
+        "1760794172598": {
+          "Altitude": 1465.8,
+          "Date": "18/10/2025",
+          "Heading": 127.84,
+          "Latitude": -1.913973,
+          "Longitude": 30.08088,
+          "Satellites": 10,
+          "Speed": 0.48152,
+          "Time (UTC)": "13:29:8",
+          "timestamp": 1760794172598
+        },
+        "1760794176694": {
+          "Altitude": 1465.8,
+          "Date": "18/10/2025",
+          "Heading": 127.84,
+          "Latitude": -1.913973,
+          "Longitude": 30.08088,
+          "Satellites": 10,
+          "Speed": 0.48152,
+          "Time (UTC)": "13:29:8",
+          "timestamp": 1760794176694
+        },
+        "1760794215899": {
+          "Altitude": 1474.2,
+          "Date": "18/10/2025",
+          "Heading": 111.33,
+          "Latitude": -1.91396,
+          "Longitude": 30.08089,
+          "Satellites": 12,
+          "Speed": 1.6668,
+          "Time (UTC)": "13:30:8",
+          "timestamp": 1760794215899
+        },
+        "1760794273289": {
+          "Altitude": 1464.4,
+          "Date": "18/10/2025",
+          "Heading": 111.33,
+          "Latitude": -1.913949,
+          "Longitude": 30.0809,
+          "Satellites": 9,
+          "Speed": 0.31484,
+          "Time (UTC)": "13:31:8",
+          "timestamp": 1760794273289
+        },
+        "1760794333397": {
+          "Altitude": 1468.6,
+          "Date": "18/10/2025",
+          "Heading": 111.33,
+          "Latitude": -1.913947,
+          "Longitude": 30.08088,
+          "Satellites": 11,
+          "Speed": 0.16668,
+          "Time (UTC)": "13:32:8",
+          "timestamp": 1760794333397
+        },
+        "1760794393654": {
+          "Altitude": 1468.7,
+          "Date": "18/10/2025",
+          "Heading": 111.33,
+          "Latitude": -1.913954,
+          "Longitude": 30.08092,
+          "Satellites": 11,
+          "Speed": 0.94452,
+          "Time (UTC)": "13:33:8",
+          "timestamp": 1760794393654
+        },
+        "1760794453613": {
+          "Altitude": 1475.3,
+          "Date": "18/10/2025",
+          "Heading": 111.33,
+          "Latitude": -1.913948,
+          "Longitude": 30.08091,
+          "Satellites": 11,
+          "Speed": 0.3704,
+          "Time (UTC)": "13:34:8",
+          "timestamp": 1760794453613
+        },
+        "1760794520717": {
+          "Altitude": 1465.2,
+          "Date": "18/10/2025",
+          "Heading": 269.66,
+          "Latitude": -1.913957,
+          "Longitude": 30.08092,
+          "Satellites": 12,
+          "Speed": 0.3704,
+          "Time (UTC)": "13:35:8",
+          "timestamp": 1760794520717
+        },
+        "1760794574220": {
+          "Altitude": 1475.2,
+          "Date": "18/10/2025",
+          "Heading": 279.94,
+          "Latitude": -1.913963,
+          "Longitude": 30.0809,
+          "Satellites": 9,
+          "Speed": 1.37048,
+          "Time (UTC)": "13:36:9",
+          "timestamp": 1760794574220
+        },
+        "1760794639943": {
+          "Altitude": 1461.4,
+          "Date": "18/10/2025",
+          "Heading": 110.48,
+          "Latitude": -1.913983,
+          "Longitude": 30.08098,
+          "Satellites": 11,
+          "Speed": 0.72228,
+          "Time (UTC)": "13:37:9",
+          "timestamp": 1760794639943
+        },
+        "1760794693614": {
+          "Altitude": 1468.8,
+          "Date": "18/10/2025",
+          "Heading": 110.48,
+          "Latitude": -1.913993,
+          "Longitude": 30.08094,
+          "Satellites": 10,
+          "Speed": 2.5002,
+          "Time (UTC)": "13:38:9",
+          "timestamp": 1760794693614
+        },
+        "1760794764918": {
+          "Altitude": 1478.4,
+          "Date": "18/10/2025",
+          "Heading": 30,
+          "Latitude": -1.913991,
+          "Longitude": 30.08095,
+          "Satellites": 12,
+          "Speed": 0.14816,
+          "Time (UTC)": "13:39:9",
+          "timestamp": 1760794764918
+        },
+        "1760794817804": {
+          "Altitude": 1465.1,
+          "Date": "18/10/2025",
+          "Heading": 30,
+          "Latitude": -1.91398,
+          "Longitude": 30.08092,
+          "Satellites": 12,
+          "Speed": 0.48152,
+          "Time (UTC)": "13:40:9",
+          "timestamp": 1760794817804
+        },
+        "1760794874804": {
+          "Altitude": 1464.8,
+          "Date": "18/10/2025",
+          "Heading": 30,
+          "Latitude": -1.913975,
+          "Longitude": 30.08092,
+          "Satellites": 12,
+          "Speed": 0.53708,
+          "Time (UTC)": "13:41:9",
+          "timestamp": 1760794874804
+        },
+        "1760794951339": {
+          "Altitude": 1470.8,
+          "Date": "18/10/2025",
+          "Heading": 30,
+          "Latitude": -1.913959,
+          "Longitude": 30.08091,
+          "Satellites": 12,
+          "Speed": 1.12972,
+          "Time (UTC)": "13:42:9",
+          "timestamp": 1760794951339
+        },
+        "1760794998760": {
+          "Altitude": 1469.5,
+          "Date": "18/10/2025",
+          "Heading": 30,
+          "Latitude": -1.913975,
+          "Longitude": 30.08094,
+          "Satellites": 11,
+          "Speed": 0.66672,
+          "Time (UTC)": "13:43:9",
+          "timestamp": 1760794998760
+        }
+      }
+    }
+  },
+  "buses": {
+    "1759922147297": {
+      "createdAt": 1759922145314,
+      "driverId": "tDmw0UzYVmJAD0LhxIxE",
+      "driverName": "driver one",
+      "driverPhone": "+25079876543",
+      "latitude": -1.9579,
+      "longitude": 30.091,
+      "plateNumber": "RAD801G",
+      "rfidReaderUsername": "Bus1"
+    },
+    "1759938679132": {
+      "createdAt": 1759938680758,
+      "driverId": "QfRebRB4cWx3RyQ0pjEW",
+      "driverName": "driver two",
+      "driverPhone": "+25071234356",
+      "latitude": -1.913958,
+      "longitude": 30.080943,
+      "plateNumber": "RAA123F",
+      "rfidReaderUsername": "Bus2"
+    }
+  },
+  "drivers": {
+    "QfRebRB4cWx3RyQ0pjEW": {
+      "createdAt": 1758797599957,
+      "currentBusReaderUsername": "Bus2",
+      "driverId": "2B:A8:DC:19",
+      "name": "driver two",
+      "phone": "+25071234356"
+    },
+    "tDmw0UzYVmJAD0LhxIxE": {
+      "createdAt": 1758795848881,
+      "currentBusReaderUsername": "Bus1",
+      "driverId": "3:E5:56:43",
+      "name": "driver one",
+      "phone": "+25079876543"
+    }
+  },
+  "logs": {
+    "-ObrQ4MgZ-s1rF9Jj49u": {
+      "busId": "1759922147297",
+      "busName": "RAD801G",
+      "driverName": "driver one",
+      "driverPhone": "+25079876543",
+      "location": {
+        "lat": -1.913991,
+        "lng": 30.08089
+      },
+      "tagId": "3:E5:56:43",
+      "timestamp": 1760792695804
+    },
+    "-ObrQxYuJn943kxaVko4": {
+      "busId": "1759922147297",
+      "busName": "RAD801G",
+      "driverName": "driver one",
+      "driverPhone": "+25079876543",
+      "location": {
+        "lat": -1.913971,
+        "lng": 30.08094
+      },
+      "status": "check-in",
+      "studentName": "mugisha",
+      "tagId": "33:D:FE:43",
+      "timestamp": 1760792924624
+    },
+    "-ObrRBD5AMccxNRq1lxW": {
+      "busId": "1759922147297",
+      "busName": "RAD801G",
+      "driverName": "driver one",
+      "driverPhone": "+25079876543",
+      "location": {
+        "lat": -1.913952,
+        "lng": 30.08093
+      },
+      "status": "check-out",
+      "studentName": "keza",
+      "tagId": "4:EB:92:71",
+      "timestamp": 1760792986104
+    },
+    "-ObrRhRY4eQJeS19pv7b": {
+      "busId": "1759922147297",
+      "busName": "RAD801G",
+      "driverName": "driver one",
+      "driverPhone": "+25079876543",
+      "location": {
+        "lat": -1.91396,
+        "lng": 30.0809
+      },
+      "status": "check-in",
+      "studentName": "keza",
+      "tagId": "4:EB:92:71",
+      "timestamp": 1760793121335
+    },
+    "-ObrRmKGTxqtOUxC1Iyd": {
+      "busId": "1759922147297",
+      "busName": "RAD801G",
+      "driverName": "driver one",
+      "driverPhone": "+25079876543",
+      "location": {
+        "lat": -1.913963,
+        "lng": 30.0809
+      },
+      "status": "check-out",
+      "studentName": "mugisha",
+      "tagId": "33:D:FE:43",
+      "timestamp": 1760793140621
+    },
+    "-ObrS--sPUNadRfl6GIt": {
+      "busId": "1759922147297",
+      "busName": "RAD801G",
+      "driverName": "driver one",
+      "driverPhone": "+25079876543",
+      "location": {
+        "lat": -1.913949,
+        "lng": 30.08092
+      },
+      "status": "check-out",
+      "studentName": "keza",
+      "tagId": "4:EB:92:71",
+      "timestamp": 1760793197951
+    },
+    "-ObrS2QkgyBZ6FTEnbQ3": {
+      "busId": "1759922147297",
+      "busName": "RAD801G",
+      "driverName": "driver one",
+      "driverPhone": "+25079876543",
+      "location": {
+        "lat": -1.91395,
+        "lng": 30.08094
+      },
+      "status": "check-in",
+      "studentName": "mugisha",
+      "tagId": "33:D:FE:43",
+      "timestamp": 1760793210698
+    }
+  },
+  "meta": {
+    "migration_done_v1": true,
+    "seed_admin_done_v1": true
+  },
+  "parents": {
+    "T24cwhbglrF5KdSsRDYq": {
+      "childId": "1758744996926",
+      "createdAt": 1758790975085,
+      "defaultPassword": "123456",
+      "email": "uwimana@ruhire.com",
+      "name": "Uwimana",
+      "phone": "+2500987654"
+    },
+    "hwsk1ZDIxGs5JXNte5rh": {
+      "childId": "1758739034218",
+      "createdAt": 1759398086621,
+      "defaultPassword": "123456",
+      "email": "kamana@ruhire.com",
+      "name": "kamana",
+      "phone": "+25071234567"
+    }
+  },
+  "students": {
+    "1758739034218": {
+      "address": "Kigali",
+      "class": "primary 1",
+      "createdAt": 1758739034218,
+      "eta": 0,
+      "isActive": true,
+      "lastBusId": "1759922147297",
+      "lastStatus": "check-out",
+      "name": "keza",
+      "parentId": "hwsk1ZDIxGs5JXNte5rh",
+      "studentId": "4:EB:92:71"
+    },
+    "1758744996926": {
+      "address": "Kigali",
+      "class": "primary 3",
+      "createdAt": 1758744996926,
+      "eta": 0,
+      "lastBusId": "1759922147297",
+      "lastStatus": "check-in",
+      "name": "mugisha",
+      "parentId": "T24cwhbglrF5KdSsRDYq",
+      "studentId": "33:D:FE:43"
+    },
+    "1760784047013": {
+      "address": "Kigali",
+      "class": "primary 2",
+      "createdAt": 1760784042779,
+      "isActive": true,
+      "lastBusId": "1759938679132",
+      "lastStatus": "check-in",
+      "name": "murisa",
+      "parentId": "",
+      "studentId": "C4:1B:D0:3"
+    }
+  },
+  "users": {
+    "4TUug3ZH12dbwy0OYwR5wvwTwEt2": {
+      "createdAt": 1758821728930,
+      "mustChangePassword": false,
+      "provisionedAdminDocId": "hjIFasg8BcY6NsDnPQAd",
+      "provisionedFrom": "admins",
+      "role": "admin"
+    },
+    "5YND3VkAjAby7OFlipum6asEr152": {
+      "role": "parent"
+    },
+    "fMQCikIzbBgjPFpnpMMv4pc5M9R2": {
+      "createdAt": 1758813038150,
+      "mustChangePassword": false,
+      "provisionedFrom": "parents",
+      "provisionedParentDocId": "prBLJbCfgaVaqraXHq20",
+      "role": "parent"
+    },
+    "gaZDfxAJ9SPdmN0yAzCSFepCbCf1": {
+      "createdAt": 1758812550828,
+      "mustChangePassword": false,
+      "provisionedFrom": "parents",
+      "provisionedParentDocId": "T24cwhbglrF5KdSsRDYq",
+      "role": "parent"
+    },
+    "q0c9zL6AqJelgjQIsjkqeJK6FcX2": {
+      "role": "admin"
+    }
+  }
+}

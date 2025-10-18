@@ -1,67 +1,64 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
+import pandas as pd
 import joblib
-import numpy as np
+import math
+from datetime import datetime
+import uvicorn
 
-# -------------------------------
-# Pydantic model for request body
-# -------------------------------
-class ETAPredictRequest(BaseModel):
-    distance_km: float
-    speed_kmh: float
-    status: int
-    bus_lat: float = 0.0
-    bus_lng: float = 0.0
-    student_lat: float = 0.0
-    student_lng: float = 0.0
-    speed: float = 0.0
-    emergency: int = 0
-    hour: int = 12
-    weekday: int = 1
+# -----------------------------
+# Load model and feature columns
+# -----------------------------
+model = joblib.load("eta_model.joblib")
+feature_columns = joblib.load("eta_features.joblib")
 
-# -------------------------------
-# Initialize FastAPI
-# -------------------------------
-app = FastAPI(title="ETA Prediction API")
+app = FastAPI()
 
-# -------------------------------
-# Load model
-# -------------------------------
-try:
-    model = joblib.load("eta_model.joblib")
-except Exception as e:
-    print("Error loading model:", e)
-    model = None
+# -----------------------------
+# Input data schema
+# -----------------------------
+class BusETARequest(BaseModel):
+    bus_lat: float
+    bus_lon: float
+    speed: float  # m/s
+    stops: list   # List of dicts: [{"student": str, "lat": float, "lon": float}]
+    timestamp: str  # ISO datetime
 
-# -------------------------------
-# Define features actually used by the model
-# -------------------------------
-MODEL_FEATURES = ["distance_km", "speed_kmh", "status"]
+# -----------------------------
+# Haversine formula
+# -----------------------------
+def haversine(lat1, lon1, lat2, lon2):
+    R = 6371  # km
+    phi1, phi2 = math.radians(lat1), math.radians(lat2)
+    d_phi, d_lambda = math.radians(lat2 - lat1), math.radians(lon2 - lon1)
+    a = math.sin(d_phi / 2)**2 + math.cos(phi1) * math.cos(phi2) * math.sin(d_lambda / 2)**2
+    c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+    return R * 1000 * c  # meters
 
-# -------------------------------
-# Health check
-# -------------------------------
-@app.get("/")
-def health():
-    return {"status": "ok", "message": "ETA Prediction API is live 🚀"}
-
-# -------------------------------
-# ETA prediction endpoint
-# -------------------------------
+# -----------------------------
+# Predict ETAs
+# -----------------------------
 @app.post("/predict_eta")
-def predict_eta(request: ETAPredictRequest):
-    if model is None:
-        return {"error": "Model not loaded"}
+def predict_eta(request: BusETARequest):
+    bus_lat, bus_lon = request.bus_lat, request.bus_lon
+    hour = datetime.fromisoformat(request.timestamp).hour
+    etas = {}
 
-    # Extract only the features your model was trained on
-    features = np.array([[getattr(request, f) for f in MODEL_FEATURES]])
-
-    try:
+    for stop in request.stops:
+        distance = haversine(bus_lat, bus_lon, stop['lat'], stop['lon'])
+        features = pd.DataFrame([{
+            'bus_lat': bus_lat,
+            'bus_lon': bus_lon,
+            'distance': distance,
+            'speed': request.speed,
+            'hour': hour
+        }])
         eta = model.predict(features)[0]
-        return {
-            "eta_minutes": float(eta),
-            "inputs_used": {f: getattr(request, f) for f in MODEL_FEATURES},
-            "all_inputs": request.dict()  # optional: keep all fields for logging/debugging
-        }
-    except Exception as e:
-        return {"error": str(e)}
+        etas[stop['student']] = max(0, eta)
+        # Move bus to this stop for next prediction
+        bus_lat, bus_lon = stop['lat'], stop['lon']
+
+    return {"etas": etas}
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=8000)
